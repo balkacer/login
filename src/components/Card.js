@@ -1,8 +1,7 @@
-export default function Card({bgColor = "", children, title}) {
+export default function Card({bgColor = "", children}) {
   return (
-    <div className={`w-screen md:w-2/4 lg:w-2/5 sm:w-3/4 xl:w-1/4 card ${bgColor ? `bg-${bgColor} text-${bgColor}-content` : ""}`}>
-      <div className="card-body">
-        <h2 className="card-title">{title}</h2>
+    <div className={`w-screen h-screen card ${bgColor ? `bg-${bgColor} text-${bgColor}-content` : ""}`}>
+      <div className="card-body w-full h-screen items-center justify-start md:justify-center overflow-auto">
         {children}
       </div>
     </div>
